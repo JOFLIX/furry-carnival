@@ -8,32 +8,39 @@
 
     <link rel="stylesheet" href="../static/css/navbar.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
   </head>
 
   <body>
 <!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark grey lighten-1" style="height:auto; justify-content:space-between; font-size:8px">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark black lighten-1" style="height:4%; justify-content:space-around; font-size:26%">
   <a class="navbar-brand" href="/">Awwards</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
     aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+  <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent-555"> -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="/">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav navbar-nav"><a href="{% url 'directory'%}">Directory</a>
+      <li class="nav navbar-nav"><a class="nav-link" href="{% url 'directory'%}">Directory</a>
       </li>
-      <li><a href="{% url 'profile'%}">Profile</a>
+      <li class="nav-item active"><a class="nav-link" href="{% url 'profile'%}">Profile</a>
       </li>
-      <li><a href="/admin">Admin</a>
+      <li class="nav-item active"><a class="nav-link" href="/admin">Admin</a>
       </li>
-      <li><a href="/logout">Logout</a>
-      </li>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a>
+        </li>
+      </ul>
     </ul>
       <ul>
       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -68,22 +75,30 @@
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item" style="float:right;">
         <a href="{% url 'new-project' %}" style="padding-right:88%">
-          <button class="btn btn-success" style="height:44px;  margin-top: -8px;background-color:#49c5b6;border-radius:0; padding-left:-44%">SUBMIT YOUR SITE</button>
+          <button class="btn btn-success" style="height:44px;  margin-top: -8px;background-color:#49c5b6;border-radius:0; padding-left:-44%">SUBMIT YOUR PROJECT</button>
         </a>
       </li>
       <li class="nav-item avatar">
         <a class="nav-link p-0" href="{% url 'profile'%}">
-          <img src="{{profile.avatar.url}}" class="rounded-circle z-depth-0"
-            alt="avatar image" height="35">
+          <img src="{{profile.avatar.url}}" class="rounded-circle z-depth-0 "
+            alt="avatar image" height="44">
         </a>
         <br>
         <a href="/user/{{profile.username}}" style="color:black;text-decoration:none;margin:auto;">
-          <p style="font-size: 13px; font-weight:lighter;margin:auto;text-transform:uppercase;margin-left:-20px;">{{profile.username}}</p>
+          <p style="font-size: 13px; font-weight:lighter;margin:auto;text-transform:uppercase;margin-left:-10px;">{{profile.username}}</p>
         </a>
       </li>
     </ul>
   </div>
 </nav>
 <!--/.Navbar -->
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
   </body>
 </html>
