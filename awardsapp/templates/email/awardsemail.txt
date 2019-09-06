@@ -1,0 +1,4 @@
+Hello {{name}}
+
+Welcome to the  Awards Website!
+    Awards awards you the ability to post, review and comment on projects.
